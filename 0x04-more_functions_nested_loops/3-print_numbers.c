@@ -8,9 +8,9 @@ void print_numbers(void)
 {
 	int i;
 
-	for (i = 0; i > 10; i = i + 1)
+	for (i = 0; i < 10; i = i + 1)
 	{
-		 printf("value of a: %d\n", i);
+		printf("value of a: %d\n", i);
 	}
 	return (0);
 }
