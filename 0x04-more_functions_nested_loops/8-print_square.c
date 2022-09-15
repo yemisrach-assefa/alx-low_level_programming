@@ -17,8 +17,9 @@ void print_square(int size)
 		{
 			for (b = 0; b < (size - 1); b++)
 			{
-			putchar ('#');
+				putchar ('#');
 			}
+			
 			putchar ('#');
 			putchat('\n);
 		}
