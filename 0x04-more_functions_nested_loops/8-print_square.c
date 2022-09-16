@@ -19,7 +19,6 @@ void print_square(int size)
 			{
 				putchar ('#');
 			}
-			
 			putchar ('#');
 			putchat('\n);
 		}
@@ -29,4 +28,3 @@ void print_square(int size)
 		putchar(\n);
 	}
 }
-
