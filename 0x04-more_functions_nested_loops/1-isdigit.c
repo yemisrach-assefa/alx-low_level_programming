@@ -7,7 +7,7 @@
  * Return: 1 if c is a digit or 0 otherwise
  */
 
-int_isdigit(int c)
+int _isdigit(int c)
 {
 	char i = '0';
 	int isdigit = 0;
