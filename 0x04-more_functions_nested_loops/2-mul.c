@@ -6,10 +6,9 @@
  * @b: second number
  * Return: return nothing
  */
-int mul(int a, int b)
+int mul(int x, int y)
 {
-	printf ("enter two numbers for multiplicaiton");
-	scanf("%d %d", &a, &b );
-	printf("multiplication of %d and %d is %d\n, a, b, (a*b));
-	return 0;
+	prod = mul(a,b);
+	printf("Product of %d and %d is: %d", a, b, prod);
+	return(x * y);
 }
