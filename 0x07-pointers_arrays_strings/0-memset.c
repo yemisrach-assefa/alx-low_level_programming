@@ -1,35 +1,46 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
- * _memset - sets a given amount of bytes to a value at an address
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
  *
- * @s: memory location to start at
- * @b: character to write to memory
- * @n: number of bytes to write
- *
- * Return: pointer to s
+ * Return: Nothing.
  */
-char *_memset(char *s, char b, unsigned int n)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
-	char *ptr = s;
+        unsigned int i;
 
-	while (n-- > 0)
-		*ptr++ = b;
+        i = 0;
+        while (i < size)
+        {
+                if (i % 10)
+                {
+                        printf(" ");
+                }
+                if (!(i % 10) && i)
+                {
+                        printf("\n");
+                }
+                printf("0x%02x", buffer[i]);
+                i++;
+        }
+        printf("\n");
+}
 
-	return (s);
 /**
- * _memset - sets a given amount of bytes to a value at an address
+ * main - check the code
  *
- * @s: memory location to start at
- * @b: character to write to memory
- * @n: number of bytes to write
- *
- * Return: pointer to s
+ * Return: Always 0.
  */
-char *_memset(char *s, char b, unsigned int n)
+int main(void)
 {
-	char *ptr = s;
+    char buffer[98] = {0x00};
 
-	while (n-- > 0)
-		*ptr++ = b;
-
-	return (s);
-}}
+    simple_print_buffer(buffer, 98);
+    _memset(buffer, 0x01, 95);
+    printf("-------------------------------------------------\n");
+    simple_print_buffer(buffer, 98);    
+    return (0);
+}
