@@ -1,20 +1,29 @@
 /**
- * _strchr - locates a character in a string
+ * _strspn - Returns the number of bytes in the initial segment
+ * of s which consist only of bytes from accept
  *
  * @s: string to search
- * @c: character to search for
+ * @accept: characters to look for
  *
- * Return: pointer to first occurence of c in s
+ * Return: number of bytes that matched at start of string
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
+	unsigned int sum = 0;
+	char *ptr = accept;
+
 	while (*s != 0)
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (*s == *ptr && *ptr != 0)
+		{
+			sum++;
+			s++;
+			ptr = accept;
+		}
+		else
+			ptr++;
+		if (*ptr == 0)
+			return (sum);
 	}
-	if (*s == c)
-		return (s);
-	return (0);
+	return (sum);
 }
