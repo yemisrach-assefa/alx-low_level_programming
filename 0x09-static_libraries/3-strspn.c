@@ -1,29 +1,33 @@
+#include "main.h"
+
 /**
- * _strspn - Returns the number of bytes in the initial segment
- * of s which consist only of bytes from accept
- *
- * @s: string to search
- * @accept: characters to look for
- *
- * Return: number of bytes that matched at start of string
+ * _strspn - a function that gets the length of a prefix substring.
+ * @s: an input string
+ * @accept: an input character with to locate into string s
+ * Return: returns pointer to c position
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int sum = 0;
-	char *ptr = accept;
+	int count = 0, flag;
+	char *start = accept;
 
-	while (*s != 0)
+	while (*s)
 	{
-		if (*s == *ptr && *ptr != 0)
+		flag = 0;
+		while (*accept)
 		{
-			sum++;
-			s++;
-			ptr = accept;
+			if (*accept == *s)
+			{
+				count++;
+				flag = 1;
+				break;
+			}
+			accept++;
 		}
-		else
-			ptr++;
-		if (*ptr == 0)
-			return (sum);
+		s++;
+		accept = start;
+		if (flag == 0)
+			break;
 	}
-	return (sum);
+	return (count);
 }
