@@ -8,14 +8,14 @@
 int main(void)
 {
         int i = 0;
-	int n = 141;
+	int n = 97;
 
-	while(i <= 9)
+	while (i <= 9)
 	{
 		putchar(i + '0');
 		i++;
 	}
-	while(n <= 146)
+	while (n <= 102)
         {
                putchar(n);
 	       n++;
