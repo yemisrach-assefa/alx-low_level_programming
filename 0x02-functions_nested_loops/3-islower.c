@@ -1,15 +1,16 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * _islower -function to create for lowercase character
- * @c: is the int that will use for the argument of the function
+ * _islower - changes to lower case
+ * @c: inputchar
+ *
+ * Discription: select whether its lower case or upper case
  * Return: 0
-*/
+ */
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-	{
+	if (c >= 97 && c <= 122)
 		return (1);
-	}
 	else
 		return (0);
 }
