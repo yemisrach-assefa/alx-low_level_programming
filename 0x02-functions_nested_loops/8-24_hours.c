@@ -17,12 +17,15 @@ void jack_bauer(void)
 	{
 		h2 = 0;
 
-	    while (h2 <= 3)
+	    while (h2 <= 9)
 	    {
 		    m1 = 0;
 
+
+
         		while (m1 <= 5)
         		{
+
 				m2 = 0;
 
             			while (m2 <= 9)
@@ -34,12 +37,18 @@ void jack_bauer(void)
                     		_putchar(m2 + '0');
                     		_putchar('\n');
 				++m2;
-				
-            }
-            ++m1;
-        }
-        ++h2;
-    }
-    ++h1;
-}
+
+            			}
+					if (h1 == 2 && h2 == 2)
+                        		{
+                                		break;
+                        		}
+
+            		++m1;
+        		}
+        			++h2;
+
+    		}
+    			++h1;
+	}
 }
