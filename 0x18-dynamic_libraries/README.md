@@ -1,1 +1,1 @@
-more on C
+static library
